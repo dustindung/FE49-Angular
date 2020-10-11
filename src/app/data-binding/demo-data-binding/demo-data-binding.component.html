@@ -1,0 +1,13 @@
+<p>demo-data-binding works!</p>
+<p>Name: {{ name }}</p>
+<input [value]="name" [disabled]="isDisabled" /> <!-- bỏ vào dấu [] để hiểu thuộc tính -->
+<!-- <img [src]="imgSrc"> -->
+
+<p>Sum : {{ 1 + 1}}</p>
+<button (click)="changeName()">Change name</button>
+<br/>
+<br/>
+<!-- Two way binding -->
+<input [(ngModel)]="email" />
+
+<p>Email: {{ email }}</p>
