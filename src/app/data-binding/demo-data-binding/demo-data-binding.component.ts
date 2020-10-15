@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoDataBindingComponent implements OnInit {
 
-  name = 'Dang Trung Hieu';
+  name = 'Dang Trung Hieu 5555';
   email: string;
   isDisabled = false;
   imgSrc='https://static01.nyt.com/images/2020/07/04/books/review/12PictureThis-01/12PictureThis-01-superJumbo.jpg';
+
   changeName(){
     this.name = "Edward Dang";
   }

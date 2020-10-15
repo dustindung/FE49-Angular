@@ -18,6 +18,9 @@ import { Ex2FooterComponent } from './Excersie-2/ex2-footer/ex2-footer.component
 import { Ex2CardItemComponent } from './Excersie-2/ex2-card-item/ex2-card-item.component';
 import { DemoDataBindingComponent } from './data-binding/demo-data-binding/demo-data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { CarComponent } from './Change-Car-Color/car/car.component';
+import { DemoDirectiveComponent } from './demo-directive/demo-directive.component';
+import { ProductManagementComponent } from './product-management/product-management.component';
 
 
 
@@ -38,6 +41,9 @@ import { FormsModule } from '@angular/forms';
     Ex2FooterComponent,
     Ex2CardItemComponent,
     DemoDataBindingComponent,
+    CarComponent,
+    DemoDirectiveComponent,
+    ProductManagementComponent,
 
     // Ex1ContentComponent,
     //đây là nơi add component
@@ -48,6 +54,6 @@ import { FormsModule } from '@angular/forms';
     //đây là nơi add module
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //AppComponent sẽ là component gốc
 })
 export class AppModule { }

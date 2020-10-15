@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-dark text-white">
+            <p class="m-0">Quản lý sản phẩm</p>
+        </div>
+        <div class="card-body">
+            <div class="d-flex">
+                <!-- phải import form-module mới dùng two way binding (ngModel) -->
+                <input type="text" class="form-control mr-3" placeholder="Mã SP" [(ngModel)]="prodId" />
+                <input type="text" class="form-control mr-3" placeholder="Tên SP" [(ngModel)]="prodName" />
+                <input type="text" class="form-control mr-3" placeholder="Giá" [(ngModel)]="price" />
+                <button class="btn btn-success" style="flex-shrink: 0;" (click)="addProduct()">Thêm sản phẩm</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header bg-dark text-white">
+            <p class="m-0">Danh sách sản phẩm</p>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã SP</th>
+                        <th>Tên SP</th>
+                        <th>Giá</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Optional chaining (?.)  -->
+                    <tr [ngClass]="{ hightlight: prod.MaSP === selectedProd?.MaSP }" (click)="selectProduct(prod)" *ngFor="let prod of products; let i = index">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ prod.MaSP }}</td>
+                        <td>{{ prod.TenSP }}</td>
+                        <td>${{ prod.Gia }}</td>
+                        <td>
+                            <button class="btn btn-danger" (click)="deleteProd(prod.MaSP)">Xoá</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

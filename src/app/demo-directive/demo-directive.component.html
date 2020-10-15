@@ -1,0 +1,45 @@
+<button (click)="makeDecision(true)">Fine</button>
+<button (click)="makeDecision(false)">Sick</button>
+
+<!-- *ngIf: dùng để ẩn hiện theo điều kiện nào đó là true hoặc là false. -->
+<p *ngIf="isFine; else elseContent">Go to Cybersoft</p>
+<!-- <p *ngIf="!isFine">Go to Cybercore</p> -->
+
+<ng-template #elseContent>
+    <p>Go to Cybercore</p>
+    <p>Fine again</p>
+</ng-template>
+
+<!--------------------- *ngSwitch ---------------------->
+<h2>ngSwitch</h2>
+<select (change)="selectMonth($event)">
+
+    <option value="1">Tháng 1</option>
+    <option value="2">Tháng 2</option>
+    <option value="3">Tháng 3</option>
+    <option value="4">Tháng 4</option>
+    <option value="5">Tháng 5</option>
+</select>
+<br>
+<input (blur)="selectMonth($event)" />
+
+<div [ngSwitch]="month">
+    <p *ngSwitchCase="1">Tháng 1 có 31 ngày</p>
+    <p *ngSwitchCase="2">Tháng 2 có 28 ngày</p>
+    <p *ngSwitchCase="3">Tháng 3 có 31 ngày</p>
+    <p *ngSwitchCase="4">Tháng 4 có 30 ngày</p>
+    <p *ngSwitchCase="5">Tháng 5 có 30 ngày</p>
+    <p *ngSwitchDefault>Không biết !</p>
+</div>
+
+<!--------------------- *ngFor ---------------------->
+<h2>ngFor</h2>
+<select (change)="selectMonth($event)">
+    <ng-container *ngIf="!isFine">
+        <option *ngFor="let item of monthOptions" [value]="item.value">
+            {{ item.title }}</option>
+    </ng-container>
+
+</select>
+
+<ng-content></ng-content>
