@@ -26,7 +26,9 @@ export class CategoryComponent implements OnInit {
 
   constructor() { }
 
+  //Lifecycle chạy lúc đầu
   ngOnInit(): void {
+    this.cateEmitter.emit('topclothes');
   }
 
 }
