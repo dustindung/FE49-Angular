@@ -11,7 +11,7 @@ export class ProductManagementComponent implements OnInit {
   prodId: string;
   price: string;
 
-  selectedProd:{MaSP: number, TenSP: string, Gia: string};
+  selectedProd: { MaSP: number, TenSP: string, Gia: string };
 
   products = [
     { MaSP: 1, TenSP: "Sony XZ", Gia: 1000 },
@@ -39,20 +39,20 @@ export class ProductManagementComponent implements OnInit {
     this.clearForm();
   }
 
-  clearForm(){
+  clearForm() {
     this.prodId = '';
     this.prodName = '';
     this.price = '';
   }
 
-  deleteProd(id: number){
+  deleteProd(id: number) {
     const index = this.products.findIndex(item => item.MaSP === id);
     this.products.splice(index, 1);
   }
 
-  selectProduct(prod: {MaSP: number, TenSP: string, Gia: string}){
+  selectProduct(prod: { MaSP: number, TenSP: string, Gia: string }) {
     this.selectedProd = prod;
-    console.log('this.selectedProd',this.selectedProd);
+    console.log('this.selectedProd', this.selectedProd);
   }
 
   constructor() { }

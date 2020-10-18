@@ -1,0 +1,6 @@
+<div class="card p-3">
+    <!-- Lúc đầu nếu k có dữ liệu, sẽ là undefined, nên nhét ? vào, optional chaning -->
+    <p class="lead">Name: <span class="text-success">{{ item?.name }}</span></p>
+    <p class="lead">Class: <span class="text-success">{{ item?.className }}</span></p>
+    <button class="btn btn-success" (click)="chooseStudent()">Choose</button>
+</div>

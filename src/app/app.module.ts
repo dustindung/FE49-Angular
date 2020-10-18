@@ -21,6 +21,13 @@ import { FormsModule } from '@angular/forms';
 import { CarComponent } from './Change-Car-Color/car/car.component';
 import { DemoDirectiveComponent } from './demo-directive/demo-directive.component';
 import { ProductManagementComponent } from './product-management/product-management.component';
+import { StudentManagementComponent } from './student-management/student-management.component';
+import { StudentItemComponent } from './student-management/student-item/student-item.component';
+import { HomeComponent } from './Dressing-Room/home/home.component';
+import { ProductListComponent } from './Dressing-Room/product-list/product-list.component';
+import { ModelComponent } from './Dressing-Room/model/model.component';
+import { ProductItemComponent } from './Dressing-Room/product-item/product-item.component';
+import { CategoryComponent } from './Dressing-Room/category/category.component';
 
 
 
@@ -44,6 +51,13 @@ import { ProductManagementComponent } from './product-management/product-managem
     CarComponent,
     DemoDirectiveComponent,
     ProductManagementComponent,
+    StudentManagementComponent,
+    StudentItemComponent,
+    HomeComponent,
+    ProductListComponent,
+    ModelComponent,
+    ProductItemComponent,
+    CategoryComponent,
 
     // Ex1ContentComponent,
     //đây là nơi add component

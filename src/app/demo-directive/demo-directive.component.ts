@@ -30,6 +30,7 @@ export class DemoDirectiveComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
