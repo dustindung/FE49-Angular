@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 
 @Component({
     selector: 'app-product-list',
@@ -8,6 +8,7 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 export class ProductListComponent implements OnInit,OnChanges {
 
     @Input() selectedCate: string;
+    @Output() productEmitter = new EventEmitter();
 
     products = [
         {
@@ -291,5 +292,9 @@ export class ProductListComponent implements OnInit,OnChanges {
     ngOnChanges(){
         this.displayProducts = this.products.filter((item)=> item.type === this.selectedCate);
     }
+
+    tryCloth(prod: {type:string, img: string}){
+        this.productEmitter.emit(prod)
+    }   
 
 }

@@ -1,7 +1,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-4" *ngFor="let prod of displayProducts">
-            <app-product-item [prod]="prod"></app-product-item>
+            <!-- $event đại diện cho thằng con truyền vào -->
+            <app-product-item (productEmitter)="tryCloth($event)" [prod]="prod"></app-product-item>
         </div>
     </div>
 </div>
